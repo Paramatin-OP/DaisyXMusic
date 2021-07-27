@@ -1,58 +1,33 @@
-# Daisyxmusic (Telegram bot project )
-# Copyright (C) 2021  Inukaasith
-
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Affero General Public License as
-# published by the Free Software Foundation, either version 3 of the
-# License, or (at your option) any later version.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU Affero General Public License for more details.
-#
-# You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
 import os
 from DaisyXMusic.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL
 class Messages():
-      START_MSG = "**Hello 👋 [{}](tg://user?id={})!**\n\n🤖 I am an advanced bot created for playing music in the voice chats of Telegram Groups & Channels.\n\n✅ Send me /help for more info."
+      START_MSG = "**нєℓℓσ 👋 [{}](tg://user?id={})!**\n\n🤖 ι αм αη α∂ναη¢є∂ вσт ¢яєαтє∂ ƒσя ρℓαуιηg мυѕι¢ ιη тнє νσι¢є ¢нαтѕ σƒ тєℓєgяαм gяσυρѕ & ¢нαηηєℓѕ.\n\n✅ ѕєη∂ мє /help ƒσя мσяє ιηƒσ."
       HELP_MSG = [
         ".",
 f"""
-**Hey 👋 Welcome back to {PROJECT_NAME}
-
-⚪️ {PROJECT_NAME} can play music in your group's voice chat as well as channel voice chats
-
-⚪️ Assistant name >> @{ASSISTANT_NAME}\n\nClick next for instructions**
+**нєу 👋 ωєℓ¢σмє вα¢к тσ {PROJECT_NAME}
+⚪️ {PROJECT_NAME} ¢αη ρℓαу мυѕι¢ ιη уσυя gяσυρ'ѕ νσι¢є ¢нαт αѕ ωєℓℓ αѕ ¢нαηηєℓ νσι¢є ¢нαтѕ
+⚪️ αѕѕιѕтαηт ηαмє >> @{ASSISTANT_NAME}\n\n¢ℓι¢к ηєχт ƒσя ιηѕтяυ¢тισηѕ**
 """,
 
 f"""
-**Setting up**
-
-1) Make bot admin (Group and in channel if use cplay)
-2) Start a voice chat
-3) Try /play [song name] for the first time by an admin
-*) If userbot joined enjoy music, If not add @{ASSISTANT_NAME} to your group and retry
-
-**For Channel Music Play**
-1) Make me admin of your channel 
-2) Send /userbotjoinchannel in linked group
-3) Now send commands in linked group
-
-**Commands**
-
-**=>> Song Playing 🎧**
-
+**ѕєттιηg υρ**
+1) 𝐌𝐚𝐤𝐞 𝐛𝐨𝐭 𝐚𝐝𝐦𝐢𝐧 (𝐆𝐫𝐨𝐮𝐩 𝐚𝐧𝐝 𝐢𝐧 𝐜𝐡𝐚𝐧𝐧𝐞𝐥 𝐢𝐟 𝐮𝐬𝐞 𝐜𝐩𝐥𝐚𝐲)
+2) 𝐒𝐭𝐚𝐫𝐭 𝐚 𝐯𝐨𝐢𝐜𝐞 𝐜𝐡𝐚𝐭
+3) 𝐓𝐫𝐲 /play [𝐬𝐨𝐧𝐠 𝐧𝐚𝐦𝐞] 𝐟𝐨𝐫 𝐭𝐡𝐞 𝐟𝐢𝐫𝐬𝐭 𝐭𝐢𝐦𝐞 𝐛𝐲 𝐚𝐧 𝐚𝐝𝐦𝐢𝐧
+*) 𝐈𝐟 𝐮𝐬𝐞𝐫𝐛𝐨𝐭 𝐣𝐨𝐢𝐧𝐞𝐝 𝐞𝐧𝐣𝐨𝐲 𝐦𝐮𝐬𝐢𝐜, 𝐈𝐟 𝐧𝐨𝐭 𝐚𝐝𝐝 @{ASSISTANT_NAME} 𝐭𝐨 𝐲𝐨𝐮𝐫 𝐠𝐫𝐨𝐮𝐩 𝐚𝐧𝐝 𝐫𝐞𝐭𝐫𝐲
+**ƒσя ¢нαηηєℓ мυѕι¢ ρℓαу**
+1) 𝐌𝐚𝐤𝐞 𝐦𝐞 𝐚𝐝𝐦𝐢𝐧 𝐨𝐟 𝐲𝐨𝐮𝐫 𝐜𝐡𝐚𝐧𝐧𝐞𝐥
+2) 𝐒𝐞𝐧𝐝 /userbotjoinchannel 𝐢𝐧 𝐥𝐢𝐧𝐤𝐞𝐝 𝐠𝐫𝐨𝐮𝐩
+3) 𝐍𝐨𝐰 𝐬𝐞𝐧𝐝 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐢𝐧 𝐥𝐢𝐧𝐤𝐞𝐝 𝐠𝐫𝐨𝐮𝐩
+**¢σммαη∂ѕ**
+**=>> ѕσηg ρℓαуιηg🎧**
 - /play: Play song using youtube music
 - /play [yt url] : Play the given yt url
 - /play [reply yo audio]: Play replied audio
 - /dplay: Play song via deezer
 - /splay: Play song via jio saavn
-
-**=>> Playback ⏯**
-
+**=>> ρℓαувα¢к ⏯**
 - /player: Open Settings menu of player
 - /skip: Skips the current track
 - /pause: Pause track
@@ -63,10 +38,8 @@ f"""
 """,
         
 f"""
-**=>> Channel Music Play 🛠**
-
+**=>> 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐌𝐮𝐬𝐢𝐜 𝐏𝐥𝐚𝐲 🛠**
 ⚪️ For linked group admins only:
-
 - /cplay [song name] - play song you requested
 - /cdplay [song name] - play song you requested via deezer
 - /csplay [song name] - play song you requested via jio saavn
@@ -78,11 +51,8 @@ f"""
 - /cskip - play next song
 - /cend - stop music play
 - /userbotjoinchannel - invite assistant to your chat
-
 channel is also can be used instead of c ( /cplay = /channelplay )
-
 ⚪️ If you donlt like to play in linked group:
-
 1) Get your channel ID.
 2) Create a group with tittle: Channel Music: your_channel_id
 3) Add bot as Channel admin with full perms
@@ -91,11 +61,9 @@ channel is also can be used instead of c ( /cplay = /channelplay )
 """,
 
 f"""
-**=>> More tools 🧑‍🔧**
-
+**=>> мσяє тσσℓѕ 🧑‍🔧**
 - /admincache: Updates admin info of your group. Try if bot isn't recognize admin
 - /userbotjoin: Invite @{ASSISTANT_NAME} Userbot to your chat
-
 *Player cmd and all other cmds except /play, /current  and /playlist  are only for admins of the group.
 """
       ]
