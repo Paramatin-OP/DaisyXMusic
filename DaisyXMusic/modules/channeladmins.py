@@ -11,7 +11,7 @@ from DaisyXMusic.helpers.decorators import errors
 from DaisyXMusic.helpers.filters import command 
 from DaisyXMusic.helpers.filters import other_filters
 from DaisyXMusic.services.callsmusic import callsmusic
-from DaisyXMusic.services.queues import queues
+from DaisyXMusic.DaisyXMusic.services.callsmusic.queues import queues
 
 
 @Client.on_message(filters.command(["channelpause","cpause"]) & filters.group & ~filters.edited)
